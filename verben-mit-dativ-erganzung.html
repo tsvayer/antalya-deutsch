@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verben mit Dativ-Ergänzung</title>
 </head>
+
 <body>
     <h1>Verben mit Dativ-Ergänzung</h1>
     <table>
@@ -79,5 +81,17 @@
             </tr>
         </tbody>
     </table>
+    <script>
+        function translateSelection() {
+            let selection = window.getSelection();
+            let text = selection.toString();
+            if (text) {
+                window.open(`https://translate.yandex.com/en/?source_lang=de&target_lang=tr&text=${text}`, "translation", "popup");
+            }
+        }
+
+        document.addEventListener("mouseup", translateSelection);
+    </script>
 </body>
+
 </html>
